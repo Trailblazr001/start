@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trailblazers' LLM School</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Orbitron', sans-serif;
+            font-family: 'Nunito Sans', sans-serif;
+            line-height: 1.8;
             background-color: #0a0a2a;
             color: #ffffff;
             margin: 0;
@@ -22,10 +23,12 @@
             align-items: center;
             text-align: center;
             padding: 20px;
+            font-family: 'Orbitron', sans-serif;
             box-sizing: border-box;
         }
         .title {
             font-size: 3em;
+            font-family: 'Orbitron', sans-serif;
             text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
             margin-bottom: 20px;
         }
@@ -40,10 +43,12 @@
         }
         h1 {
             font-size: 3em;
+            font-family: 'Orbitron', sans-serif;
             margin-bottom: 20px;
             text-shadow: 0 0 10px #00ffff;
         }
         h2 {
+            font-family: 'Orbitron', sans-serif;
             color: #00ffff;
         }
         a {
@@ -84,6 +89,7 @@
             background-color: rgba(255, 255, 255, 0.1);
             border: 1px solid #00ffff;
             color: #ffffff;
+            font-family: 'Nunito Sans', sans-serif;
         }
         .emoji {
             font-size: 2em;
@@ -94,7 +100,7 @@
         .left-aligned-list {
             text-align: left;
             list-style-position: inside;
-            font-family: sans-serif;
+            font-family: 'Nunito Sans', sans-serif;
         }
         .centered-container {
             text-align: center;
@@ -108,12 +114,13 @@
     <div class="fullscreen">
         <h1>Trailblazers' LLM School 🚀</h1>
         <div id="dynamic-question"></div>
-        <button class="cta-button" onclick="showForm()">Trailblaze with LLM School 🌟</button>
+
+        <button class="cta-button" onclick="showForm('email-form-top')">Trailblaze with LLM School 🌟</button>
         <div class="emoji">🤖 🧠 💡</div>
         <div id="timer"></div>
-        <form action="mailto:trailblazr001@gmail.com" method="POST" enctype="text/plain" id="email-form">
+        <form action="mailto:trailblazr001@gmail.com" method="POST" enctype="text/plain" id="email-form-top" style="display: none;">
             <input type="email" name="email" placeholder="Enter your email" required>
-            <textarea name="message" placeholder="Any questions or comments?" rows="3"></textarea>
+            <textarea name="message" placeholder="Any questions or comments to the school?" rows="3"></textarea>
             <button type="submit" class="cta-button">Send 📤</button>
         </form>
     </div>
@@ -124,10 +131,10 @@
                 <p>
                     This course is designed for:
                 </p>
-                <li>Software developers willing to become AI Practitioners</li>
-                <li>Data Engineers willing to utilize their data pipelines for new AI applications</li>
-                <li>Everyone who feels like there's a lot of buzz in the AI space but isn't seeing the underlying technology</li>
-            </ul>
+                <li>AI enthusiasts eager to build confidence when working with LLMs and take their understanding to a deeper level</li>
+                <li>Software developers and engineers interested in customizing LLMs and exploring the creative possibilities of AI</li>
+                <li>Data scientists and researchers looking to unlock new exciting projects and stay ahead of the curve in the AI field</li>
+                <li>Individuals who understand that current investments and interest in AI will be utilized by someone, and want to ensure that someone is them - taking control of their own AI journey and future-proofing their skills</li>            </ul>
 
         <h2>What</h2>
             <ul class="left-aligned-list">
@@ -162,25 +169,26 @@
                 <li>
                     <strong>Week 6: "Efficient Fine-Tuning" - Parameter-Efficient Fine-Tuning with LoRA</strong>
                     
-                    <p>Read the appendix on parameter-efficient fine-tuning with LoRA and learn how to optimize your LLM.</p>
+                    <p>Read the provided info on parameter-efficient fine-tuning with LoRA and learn how to optimize your LLM.</p>
                 </li>
                 <li>
                     <strong>Week 7: "Coming back to the Roots with C Coding Challenge" - Coding the LLM in C</strong>
                     
-                    <p>Check out coding repositories available and learn how to code the LLM in C.</p>
+                    <p>Check out coding repositories provided and learn how to code the LLM in C.</p>
                 </li>
                 <li>
                     <strong>Final Week: "Build and Share" - Building Something Cool and Sharing it with the World</strong>
                     
-                    Use your newfound skills to build something cool and share it with the world!
+                    <p>Use your newfound skills to build something cool and share it with the world!</p>
                 </li>
         </ul>
 
         <h2>How</h2>
+            <p class="left-aligned-list">
+                Our 8-week LLM School is built on top of the following resources:
+            </p>
             <ul class="left-aligned-list">
-                <p>
-                    Our 8-week LLM School is built on top of the following resources:
-                </p>
+
                 <li><a href="https://sebastianraschka.com/books/#build-a-large-language-model-from-scratch">Book"LLMs from Scratch" by Sebastian Raschka</a></li>
                 <li><a href="https://www.youtube.com/@AndrejKarpathy">Video Materials from Andrej Karpathy</a></li>
                 <li><a href="https://www.deeplearningbook.org/">Book "Deep Learning" by Ian Goodfellow, Yoshua Bengio, and Aaron Courville</a></li>
@@ -191,8 +199,8 @@
             <h3>Option 1: Self-Study</h3>
             <ul class="left-aligned-list">
                 <li>Goal setting and progress check-in in the middle of the course</li>
-                <li>Review of the next steps as a touchpoint on the project to build at the end of the course</li>
-                <li>Optional weekly reminders on the week's content</li>
+                <li>Final review of the next steps as a touchpoint on the project to build at the end of the course</li>
+                <li>Weekly reminders on the week's content, if you opt in</li>
             </ul>
             <h3>Option 2: With Community</h3>
             <p class="left-aligned-list">In addition to all the self-study materials, you'll also get:</p>
@@ -204,15 +212,23 @@
                 <li>Interactive quizzes to ensure comprehension and assess progress (not just for grades, but to ensure understanding)</li>
             </ul>
     </div>
-    <div class="centered-container">
-        <!--<button class="cta-button" onclick="showForm()">Trailblaze with LLM School 🌟</button>*/
 
-        <form action="mailto:trailblazr001@gmail.com" method="POST" enctype="text/plain" id="email-form">
+    <div class="centered-container">
+        <h2>Are you with us?</h2>
+    </div>
+
+    <div class="centered-container">
+        <button class="cta-button" onclick="showForm('email-form-bottom')">Join LLM Trailblazers 🌟</button>
+        <form action="mailto:trailblazr001@gmail.com" method="POST" enctype="text/plain" id="email-form-bottom" style="display: none;">
             <input type="email" name="email" placeholder="Enter your email" required>
             <textarea name="message" placeholder="Any questions or comments to the school?" rows="3"></textarea>
             <button type="submit" class="cta-button">Send 📤</button>
-        </form>-->
+        </form>
         <div class="emoji">🤖 🧠 💡</div>
+        <p>
+
+
+        </p>
     </div>
 
     <script>
@@ -220,8 +236,8 @@
             "Feeling like AI progress is leaving you behind? 🏃‍♂️💨",
             "Want to truly understand how LLMs work? 🧐🔍",
             "Overwhelmed by the flood of AI learning resources? 🌊📚",
-            "Want to unlock new exciting porjects and be an AI leader? 🚀💼",
-            "Willing to build confidence when building with LLMs? 💪🔓"
+            "Want to unlock new exciting projects and be an AI thought leader? 🚀💼",
+            "Willing to build LLM-powered applications with confidence? 💪🔓"
         ];
 
         function changeQuestion() {
@@ -254,9 +270,11 @@
         
         setInterval(updateTimer, 1000);
         updateTimer(); // Initial timer update
-
-        function showForm() {
-            document.getElementById('email-form').style.display = 'block';
+        
+        function showForm(formId) {
+            document.getElementById(formId).style.display = 'block';
+            // Optionally hide the corresponding button
+            document.querySelector(`button[onclick="showForm('${formId}')"]`).style.display = 'none';
         }
     </script>
 </body>
