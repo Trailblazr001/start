@@ -10,22 +10,44 @@
             font-family: 'Orbitron', sans-serif;
             background-color: #0a0a2a;
             color: #ffffff;
-            line-height: 1.6;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+        }
+        .fullscreen {
+            height: 100vh;
+            width: 100vw;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-        }
-        .container {
-            max-width: 800px;
             text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .title {
+            font-size: 3em;
+            text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .content {
+            padding: 0 80px;
+            max-width: 800px;
+            margin: auto 80px;
         }
         h1 {
             font-size: 3em;
             margin-bottom: 20px;
             text-shadow: 0 0 10px #00ffff;
+        }
+        h2 {
+            color: #00ffff;
+        }
+        a {
+            color: #ff00ff;
         }
         #dynamic-question {
             font-size: 1.5em;
@@ -40,6 +62,8 @@
             font-size: 1.2em;
             cursor: pointer;
             transition: all 0.3s ease;
+            margin: 0 auto;
+            display: block;
         }
         .cta-button:hover {
             background-color: #ffffff;
@@ -63,12 +87,25 @@
         }
         .emoji {
             font-size: 2em;
-            margin: 10px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .left-aligned-list {
+            text-align: left;
+            list-style-position: inside;
+            font-family: sans-serif;
+        }
+        .centered-container {
+            text-align: center;
+            margin: 80px auto 0 auto;
+            display: block;
+            max-width: 800px; /* Optional: set a max width to center the content */
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="fullscreen">
         <h1>Trailblazers' LLM School 🚀</h1>
         <div id="dynamic-question"></div>
         <button class="cta-button" onclick="showForm()">Trailblaze with LLM School 🌟</button>
@@ -79,92 +116,103 @@
             <textarea name="message" placeholder="Any questions or comments?" rows="3"></textarea>
             <button type="submit" class="cta-button">Send 📤</button>
         </form>
-                <!-- Course Description Sections -->
-                <section id="course-description">
-                    <h2>For Whom</h2>
-                    <p>
-                        This course is designed for:
-                        <ul>
-                            <li>Software developers willing to become AI Practitioners</li>
-                            <li>Data Engineers willing to utilize their data pipelines for new AI applications</li>
-                            <li>Everyone who feels like there's a lot of buzz in the AI space but isn't seeing the underlying technology</li>
-                        </ul>
-                    </p>
-        
-                    <h2>What</h2>
-                    <p>
-                        Our 8-week course is designed to take you on a journey from the basics of LLMs to building your own model. Here's a breakdown of what you can expect each week:
-                        <ul>
-                            <li>
-                                <strong>Week 1: "Pipeline Primer" - Setting Up Your Data Loading Pipeline</strong>
-                                Learn how to implement a data loading pipeline in AIML and review relevant code in PyTorch.
-                            </li>
-                            <li>
-                                <strong>Week 2: "Tokenization Tales" - Training a BPE Tokenizer from Scratch</strong>
-                                Watch video tutorials on training a BPE tokenizer and review the chapter on attention mechanisms.
-                            </li>
-                            <li>
-                                <strong>Week 3: "Model Mastery" - Implementing the Model Architecture in AIML</strong>
-                                Read the chapters on implementing the model architecture in AIML and start building your LLM.
-                            </li>
-                            <li>
-                                <strong>Week 4: "Pretraining Palooza" - Pretraining the LLM</strong>
-                                Watch tutorial videos on pretraining the LLM and read the chapter on pretraining and loading pretrained weights.
-                            </li>
-                            <li>
-                                <strong>Week 5: "Fine-Tuning Frenzy" - Fine-Tuning the LLM and Adding Bells and Whistles</strong>
-                                Read the chapters on fine-tuning the LLM and review the code for instruction fine-tuning.
-                            </li>
-                            <li>
-                                <strong>Week 6: "Efficient Fine-Tuning" - Parameter-Efficient Fine-Tuning with LoRA</strong>
-                                Read the appendix on parameter-efficient fine-tuning with LoRA and learn how to optimize your LLM.
-                            </li>
-                            <li>
-                                <strong>Week 7: "Coming back to the Roots with C Coding Challenge" - Coding the LLM in C</strong>
-                                Check out coding repositories available online and learn how to code the LLM in C.
-                            </li>
-                            <li>
-                                <strong>Final Week: "Build and Share" - Building Something Cool and Sharing it with the World</strong>
-                                Use your newfound skills to build something cool and share it with the world!
-                            </li>
-                        </ul>
-                    </p>
-        
-                    <h2>How</h2>
-                    <p>
-                        Our 8-week course is built on top of the following resources:
-                        <ul>
-                            <li><a href="https://sebastianraschka.com/books/#build-a-large-language-model-from-scratch">"LLMs from Scratch" by Sebastian Raschka</a></li>
-                            <li><a href="https://www.youtube.com/@AndrejKarpathy">Materials from Andrej Karpathy</a></li>
-                            <li><a href="https://www.deeplearningbook.org/">"Deep Learning" by Ian Goodfellow, Yoshua Bengio, and Aaron Courville</a></li>
-                        </ul>
-                        You can choose from two options to complete the course:
-                        <h3>Option 1: Self-Study</h3>
-                        <ul>
-                            <li>Goal setting and progress check-in in the middle of the course</li>
-                            <li>Review of the next steps as a touchpoint on the project to build at the end of the course</li>
-                            <li>Optional weekly reminders on the week's content</li>
-                        </ul>
-                        <h3>Option 2: With Community</h3>
-                        <p>In addition to all the self-study materials, you'll also get:</p>
-                        <ul>
-                            <li>Small class size for a closer learning experience</li>
-                            <li>Online chat with participants for Q&A and aligning on understanding</li>
-                            <li>Community study with boosted engagement and motivation</li>
-                            <li>Bi-weekly sessions on practical topics such as RAG, Agents, data security, Responsible AI, instruction fine-tuning, and application system design</li>
-                            <li>Interactive quizzes to ensure comprehension and assess progress (not just for grades, but to ensure understanding)</li>
-                        </ul>
-                    </p>
-                </section>
-                <button class="cta-button" onclick="showForm()">Trailblaze with LLM School 🌟</button>
-                <div class="emoji">🤖 🧠 💡</div>
-                <div id="timer"></div>
-                <form action="mailto:trailblazr001@gmail.com" method="POST" enctype="text/plain" id="email-form">
-                    <input type="email" name="email" placeholder="Enter your email" required>
-                    <textarea name="message" placeholder="Any questions or comments?" rows="3"></textarea>
-                    <button type="submit" class="cta-button">Send 📤</button>
-                </form>
-            </div>
+    </div>
+    <!-- Course Description Sections -->
+    <div class="content">
+        <h2>For Whom</h2>
+            <ul class="left-aligned-list">
+                <p>
+                    This course is designed for:
+                </p>
+                <li>Software developers willing to become AI Practitioners</li>
+                <li>Data Engineers willing to utilize their data pipelines for new AI applications</li>
+                <li>Everyone who feels like there's a lot of buzz in the AI space but isn't seeing the underlying technology</li>
+            </ul>
+
+        <h2>What</h2>
+            <ul class="left-aligned-list">
+                <p>
+                    LLM study group is designed to take you on a journey from the basics of Large Language Models to building your own model. Here's a breakdown of what you can expect each week:
+                </p>
+                <li>
+                    <strong>Week 1: "Pipeline Primer" - Setting Up Your Data Loading Pipeline</strong>
+                    
+                    <p>Learn how to implement a data loading pipeline in AIML and review relevant code in PyTorch.</p>
+                </li>
+                <li>
+                    <strong>Week 2: "Tokenization Tales" - Training a BPE Tokenizer from Scratch</strong>
+                    
+                    <p>Watch video tutorials on training a BPE tokenizer and review the chapter on attention mechanisms.
+                </li>
+                <li>
+                    <strong>Week 3: "Model Mastery" - Implementing the Model Architecture in AIML</strong>
+                    
+                    <p>Read the chapters on implementing the model architecture in AIML and start building your LLM.</p>
+                </li>
+                <li>
+                    <strong>Week 4: "Pretraining Palooza" - Pretraining the LLM</strong>
+                    
+                    <p>Watch tutorial videos on pretraining the LLM and read the chapter on pretraining and loading pretrained weights.</p>
+                </li>
+                <li>
+                    <strong>Week 5: "Fine-Tuning Frenzy" - Fine-Tuning the LLM and Adding Bells and Whistles</strong>
+                    
+                    <p>Read the chapters on fine-tuning the LLM and review the code for instruction fine-tuning.</p>
+                </li>
+                <li>
+                    <strong>Week 6: "Efficient Fine-Tuning" - Parameter-Efficient Fine-Tuning with LoRA</strong>
+                    
+                    <p>Read the appendix on parameter-efficient fine-tuning with LoRA and learn how to optimize your LLM.</p>
+                </li>
+                <li>
+                    <strong>Week 7: "Coming back to the Roots with C Coding Challenge" - Coding the LLM in C</strong>
+                    
+                    <p>Check out coding repositories available and learn how to code the LLM in C.</p>
+                </li>
+                <li>
+                    <strong>Final Week: "Build and Share" - Building Something Cool and Sharing it with the World</strong>
+                    
+                    Use your newfound skills to build something cool and share it with the world!
+                </li>
+        </ul>
+
+        <h2>How</h2>
+            <ul class="left-aligned-list">
+                <p>
+                    Our 8-week LLM School is built on top of the following resources:
+                </p>
+                <li><a href="https://sebastianraschka.com/books/#build-a-large-language-model-from-scratch">Book"LLMs from Scratch" by Sebastian Raschka</a></li>
+                <li><a href="https://www.youtube.com/@AndrejKarpathy">Video Materials from Andrej Karpathy</a></li>
+                <li><a href="https://www.deeplearningbook.org/">Book "Deep Learning" by Ian Goodfellow, Yoshua Bengio, and Aaron Courville</a></li>
+            </ul>
+            <p class="left-aligned-list">
+                You can choose from two options to complete the course:
+            </p>
+            <h3>Option 1: Self-Study</h3>
+            <ul class="left-aligned-list">
+                <li>Goal setting and progress check-in in the middle of the course</li>
+                <li>Review of the next steps as a touchpoint on the project to build at the end of the course</li>
+                <li>Optional weekly reminders on the week's content</li>
+            </ul>
+            <h3>Option 2: With Community</h3>
+            <p class="left-aligned-list">In addition to all the self-study materials, you'll also get:</p>
+            <ul class="left-aligned-list">
+                <li>Small class size for a closer learning experience</li>
+                <li>Online chat with participants for Q&A and aligning on understanding</li>
+                <li>Community study with boosted engagement and motivation</li>
+                <li>Bi-weekly sessions on practical topics such as RAG, Agents, data security, Responsible AI, instruction fine-tuning, and application system design</li>
+                <li>Interactive quizzes to ensure comprehension and assess progress (not just for grades, but to ensure understanding)</li>
+            </ul>
+    </div>
+    <div class="centered-container">
+        <!--<button class="cta-button" onclick="showForm()">Trailblaze with LLM School 🌟</button>*/
+
+        <form action="mailto:trailblazr001@gmail.com" method="POST" enctype="text/plain" id="email-form">
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <textarea name="message" placeholder="Any questions or comments to the school?" rows="3"></textarea>
+            <button type="submit" class="cta-button">Send 📤</button>
+        </form>-->
+        <div class="emoji">🤖 🧠 💡</div>
     </div>
 
     <script>
@@ -179,7 +227,7 @@
             questionElement.textContent = questions[Math.floor(Math.random() * questions.length)];
         }
 
-        setInterval(changeQuestion, 5000);
+        setInterval(changeQuestion, 2000);
         changeQuestion(); // Initial question
 
         // Set the date we're counting down to
