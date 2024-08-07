@@ -12,8 +12,10 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
     <title>Trailblazers' LLM School</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
             font-family: 'Nunito Sans', sans-serif;
@@ -143,6 +145,69 @@
             .content, .fullscreen {
                 padding: 10px;
             }
+            }
+        pre {
+            background-color: black;
+            border: 1px solid #ddd;
+            border-left: 3px solid #00ffff;
+            color: #666;
+            page-break-inside: avoid;
+            font-family: monospace;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 1.6em;
+            max-width: 100%;
+            overflow: auto;
+            padding: 0.5em 0.5em 0.5em 0.5em;
+            display: block;
+            word-wrap: break-word;
+        }
+        
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+        }
+        
+        .language-plaintext {
+            color: #01a252;
+        }
+        .collapsible {
+            background-color: #f1f1f1;
+            font-family: 'Orbitron', sans-serif;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            }
+
+        .active, .collapsible:hover {
+            background-color: #ccc;
+            }
+
+        .peek-content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            }
+
+        .collapsible:after {
+            content: '\f06e'; /* Unicode for eye icon */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: '\f070'; /* Unicode for eye-slash icon */
+        }
+        .dark-text {
+            color: black;
         }
     </style>
 </head>
@@ -152,10 +217,10 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div class="fullscreen">
-        <h1>Trailblazers' LLM School 🚀</h1>
+        <h1>LLM Trailblazers' Accelerator Program 🚀</h1>
         <div id="dynamic-question"></div>
 
-        <button class="cta-button" onclick="showForm('email-form-top')">Trailblaze with LLM School 🌟</button>
+        <button class="cta-button" onclick="showForm('email-form-top')">Trailblaze LLM-s from Scratch 🌟</button>
         <div class="emoji">🤖 🧠 💡</div>
         <div id="timer"></div>
         <form action="mailto:trailblazr001@gmail.com" method="POST" enctype="text/plain" id="email-form-top" style="display: none;">
@@ -169,88 +234,136 @@
         <h2>For Whom</h2>
             <ul class="left-aligned-list">
                 <p>
-                    This course is designed for:
+                    Join if you want to be with:
                 </p>
                 <li>AI enthusiasts eager to build confidence when working with LLMs and take their understanding to a deeper level</li>
-                <li>Software developers and engineers interested in customizing LLMs and exploring the creative possibilities of AI</li>
-                <li>Data scientists and researchers looking to unlock new exciting projects and stay ahead of the curve in the AI field</li>
-                <li>Individuals who understand that current investments and interest in AI will be utilized by someone, and want to ensure that someone is them - taking control of their own AI journey and future-proofing their skills</li>            </ul>
-
-        <h2>What</h2>
+                <li>Software engineers, years apart from their first commit, now ready to navigate the landscape of AI applications</li>
+                <li>Data Engineers with hands-on data experience, looking to unlock new projects that bridge the gap to Data Science</li>
+                <li>Individuals who understand that current investments and interest in AI will be utilized by someone, and want to ensure that someone is them - taking control of their own AI journey and future-proofing their skills</li>
+            </ul>
+        <h2>What You'll Learn</h2>
             <ul class="left-aligned-list">
                 <p>
-                    LLM study group is designed to take you on a journey from the basics of Large Language Models to building your own model. Here's a breakdown of what you can expect each week:
+                    Our 8-week Accelerator program takes you on a comprehensive journey through Large Language Models. Here's what you'll learn each week:
                 </p>
                 <li>
-                    <strong>Week 1: "Pipeline Primer" - Setting Up Your Data Loading Pipeline</strong>
-                    
-                    <p>Learn how to implement a data loading pipeline in AIML and review relevant code in PyTorch.</p>
+                    <strong>Week 1: "LLM-s 101" - Understanding Large Language Models</strong>
+                    <p>Explore how LLMs differ from other ML models and set up your first data loading pipeline.</p>
                 </li>
                 <li>
-                    <strong>Week 2: "Tokenization Tales" - Training a BPE Tokenizer from Scratch</strong>
-                    
-                    <p>Watch video tutorials on training a BPE tokenizer and review the chapter on attention mechanisms.
+                    <strong>Week 2: "Turning Words into Tokens" - Working with Text Data</strong>
+                    <p>Learn to build data pipelines for LLMs and train a BPE tokenizer from scratch.</p>
                 </li>
                 <li>
-                    <strong>Week 3: "Model Mastery" - Implementing the Model Architecture in AIML</strong>
-                    
-                    <p>Read the chapters on implementing the model architecture in AIML and start building your LLM.</p>
+                    <strong>Week 3: "Attention, Please!" - Coding Attention Mechanisms</strong>
+                    <p>Dive into attention mechanisms and understand where decoder and encoder architectures diverge.</p>
                 </li>
                 <li>
-                    <strong>Week 4: "Pretraining Palooza" - Pretraining the LLM</strong>
-                    
-                    <p>Watch tutorial videos on pretraining the LLM and read the chapter on pretraining and loading pretrained weights.</p>
+                    <strong>Week 4: "GPT from Scratch" - Implementing Your Own Transformer Model</strong>
+                    <p>Build a GPT model from the ground up, complete with training whistles and bells.</p>
                 </li>
                 <li>
-                    <strong>Week 5: "Fine-Tuning Frenzy" - Fine-Tuning the LLM and Adding Bells and Whistles</strong>
-                    
-                    <p>Read the chapters on fine-tuning the LLM and review the code for instruction fine-tuning.</p>
+                    <strong>Week 5: "Pretraining Powerhouse" - Unleashing Unlabeled Data</strong>
+                    <p>Explore pretraining on unlabeled data and understand the impact of context size.</p>
                 </li>
                 <li>
-                    <strong>Week 6: "Efficient Fine-Tuning" - Parameter-Efficient Fine-Tuning with LoRA</strong>
-                    
-                    <p>Read the provided info on parameter-efficient fine-tuning with LoRA and learn how to optimize your LLM.</p>
+                    <strong>Week 6: "Changing LLM Behavior" - Fine-tuning Techniques</strong>
+                    <p>Master fine-tuning for text classification and and domain adaptation with continued pre-training, PEFT and LoRA revisited.</p>
                 </li>
                 <li>
-                    <strong>Week 7: "Coming back to the Roots with C Coding Challenge" - Coding the LLM in C</strong>
-                    
-                    <p>Check out coding repositories provided and learn how to code the LLM in C.</p>
+                    <strong>Week 7: "InstructGPT" - Letting LLM-s Follow Instructions</strong>
+                    <p>Dive deeper into how conversational chatbots are different from LLM-s.</p>
                 </li>
                 <li>
-                    <strong>Final Week: "Build and Share" - Building Something Cool and Sharing it with the World</strong>
-                    
-                    <p>Use your newfound skills to build something cool and share it with the world!</p>
+                    <strong>Week 8: "Build and Innovate" - Bringing Your Ideas to Life</strong>
+                    <p>Apply your newfound skills to build an innovative project, either solo or with a pair programming buddy.</p>
                 </li>
-        </ul>
+            </ul>
 
-        <h2>How</h2>
-            <p class="left-aligned-list">
-                Our 8-week LLM School is built on top of the following resources:
+            <h2>How</h2>
+            <p>
+                Our 8-week Accelerator Circle is designed to fit into your busy schedule, requiring only 2-3 hours of commitment per week. The program is built on top of the following high-quality resources:
             </p>
             <ul class="left-aligned-list">
-
-                <li><a href="https://sebastianraschka.com/books/#build-a-large-language-model-from-scratch">Book"LLMs from Scratch" by Sebastian Raschka</a></li>
+                <li><a href="https://sebastianraschka.com/books/#build-a-large-language-model-from-scratch">Book "LLMs from Scratch" by Sebastian Raschka</a></li>
                 <li><a href="https://www.youtube.com/@AndrejKarpathy">Video Materials from Andrej Karpathy</a></li>
                 <li><a href="https://www.deeplearningbook.org/">Book "Deep Learning" by Ian Goodfellow, Yoshua Bengio, and Aaron Courville</a></li>
+                <li><a href="https://www.deeplearning.ai/">Deeplearning.ai Materials from Andrew Ng</a></li>
             </ul>
-            <p class="left-aligned-list">
-                You can choose from two options to complete the course:
+            <p>
+                You'll have two options to complete the course:
             </p>
             <h3>Option 1: Self-Study</h3>
-            <ul class="left-aligned-list">
+            <ul>
                 <li>Goal setting and progress check-in in the middle of the course</li>
                 <li>Final review of the next steps as a touchpoint on the project to build at the end of the course</li>
                 <li>Weekly reminders on the week's content, if you opt in</li>
             </ul>
             <h3>Option 2: With Community</h3>
-            <p class="left-aligned-list">In addition to all the self-study materials, you'll also get:</p>
-            <ul class="left-aligned-list">
+            <p>In addition to all the self-study materials, you'll also get:</p>
+            <ul>
                 <li>Small class size for a closer learning experience</li>
                 <li>Online chat with participants for Q&A and aligning on understanding</li>
                 <li>Community study with boosted engagement and motivation</li>
                 <li>Bi-weekly sessions on practical topics such as RAG, Agents, data security, Responsible AI, instruction fine-tuning, and application system design</li>
                 <li>Interactive quizzes to ensure comprehension and assess progress (not just for grades, but to ensure understanding)</li>
             </ul>
+
+            <div class="collapsible-section">
+                <button class="collapsible">Peek Under The Hood: TinyGPT in Action</button>
+                <div class="peek-content">
+                    <pre><code class="language-python">
+                    import torch
+                    import torch.nn as nn
+
+                    class TinyGPT(nn.Module):
+                        def __init__(self):
+                            super().__init__()
+                            self.embedding = nn.Embedding(1000, 16)
+                            self.transformer = nn.TransformerEncoder(
+                                nn.TransformerEncoderLayer(16, 2), 1
+                            )
+                            self.fc = nn.Linear(16, 1000)
+                        
+                        def forward(self, x):
+                            return self.fc(self.transformer(self.embedding(x)))
+
+                    # Let's try it out!
+                    model = TinyGPT()
+                    input_text = "ready to trailblaze?"
+                    input_tokens = torch.tensor([[1, 2, 3]])  # Pretended tokens
+
+                    output = model(input_tokens)
+                    print(f"Input: {input_text}")
+                    print(f"Output shape: {output.shape}")
+                    </code></pre>
+                    <p class="dark-text">Output:</p>
+                    <pre><code class="language-plaintext">
+                    Input: ready to trailblaze?
+                    Output shape: torch.Size([1, 3, 1000])
+                    </code></pre>
+                    <p class="dark-text">
+                        This TinyGPT model demonstrates the basic structure of a GPT. What's happening?
+                    </p>
+                    <ul class="dark-text">
+                        <li>We input the phrase "ready to trailblaze?" tokenized as [1, 2, 3] for simplicity.</li>
+                        <li>The output shape [1, 3, 1000] means:
+                            <ul>
+                                <li>1: We're processing one batch (one input sequence)</li>
+                                <li>3: The model produces output for each of the 3 input words</li>
+                                <li>1000: For each word, it predicts probabilities for 1000 potential next words</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p class="dark-text">
+                        In a full-sized GPT, this output would be used to predict the most likely next word in the sequence. It's like the model is constantly asking, "What comes next?" for every word it sees!
+                    </p>
+                    <p class="dark-text">
+                        Join us to dive deeper into building and understanding these fascinating models!
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="centered-container">
@@ -260,8 +373,8 @@
     <div class="centered-container">
         <button class="cta-button" onclick="showForm('email-form-bottom')">Join LLM Trailblazers 🌟</button>
         <form action="mailto:trailblazr001@gmail.com" method="POST" enctype="text/plain" id="email-form-bottom" style="display: none;">
-            <input type="email" name="email" placeholder="Enter your email" required>
-            <textarea name="message" placeholder="Any questions or comments to the school?" rows="3"></textarea>
+            <input type="email" name="email" placeholder="Here is my email" required>
+            <textarea name="message" placeholder="Take me to LLM Trailblazers with community OR for self-study!" rows="3"></textarea>
             <button type="submit" class="cta-button">Send 📤</button>
         </form>
         <div class="emoji">🤖 🧠 💡</div>
@@ -315,6 +428,24 @@
             document.getElementById(formId).style.display = 'block';
             // Optionally hide the corresponding button
             document.querySelector(`button[onclick="showForm('${formId}')"]`).style.display = 'none';
+        }
+        
+        // Peek under the Hood collapsible
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+            content.style.display = "none";
+            this.style.backgroundColor = "#f1f1f1";
+            } else {
+            content.style.display = "block";
+            this.style.backgroundColor = "#e7e7e7";
+            }
+        });
         }
     </script>
 </body>
